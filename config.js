@@ -4,7 +4,8 @@ const config = {
     // You can add multiple users by doing username: 'password'.
     admin: "sigmaMale",
     LittleTim2359: "Incineroar#737",
-    chingChong: "scammerMan"
+    chingChong: "scammerMan",
+    Skibidiaura2k: "1553pineapple"
   },
 };
 

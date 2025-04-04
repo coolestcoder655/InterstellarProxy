@@ -5,7 +5,8 @@ const config = {
     admin: "sigmaMale",  // Me
     LittleTim2359: "Incineroar#737",  // Timothy
     chingChong: "scammerMan",  // Arnik
-    Skibidiaura2k: "1553pineapple"  // Walker
+    Skibidiaura2k: "1553pineapple",  // Walker
+    arab: "terroism"  // Rayaan
   },
 };
 

@@ -7,7 +7,7 @@ const config = {
     chingChong: "scammerMan",  // Arnik
     Skibidiaura2k: "1553pineapple",  // Walker
     // arab: "terroism"  // Rayaan
-    mrJones: "guessMyPasscode" // Khalil
+    thesea: "theDeap" // Khalil
   },
 };
 

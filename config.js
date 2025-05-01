@@ -9,7 +9,8 @@ const config = {
     // arab: "terroism"  // Rayaan
     // thesea: "theDeap", // Khalil
     MichaelMonson: "Michael",  // Michael
-    penguin: "qwerty" // Isiaiah
+    penguin: "qwerty", // Isiaiah
+    Ironclad276: "schoolkutty"
   },
 };
 

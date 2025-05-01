@@ -178,7 +178,8 @@ const SplashT = [
   "I'm super cool",
   "I know.",
   "The FitnessGram Pacer Test is a multistage aerobic capacity test...",
-  "Arnik, don't report me :3"
+  "Arnik, don't report me :3",
+  "Some person named Isaiah C. is very smart :)"
 ];
 
 let SplashI = Math.floor(Math.random() * SplashT.length);

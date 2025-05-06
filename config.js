@@ -8,7 +8,7 @@ const config = {
     Skibidiaura2k: "1553pineapple",  // Walker
     // arab: "terroism"  // Rayaan
     // thesea: "theDeap", // Khalil
-    // MichaelMonson: "Michael",  // Michael
+    Science: "Math",  // Michael
     penguin: "qwerty", // Isiaiah
     Ironclad276: "schoolkutty"
   },

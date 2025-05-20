@@ -10,7 +10,8 @@ const config = {
     // thesea: "theDeap", // Khalil
     Science: "Math",  // Michael
     penguin: "qwerty", // Isiaiah
-    Ironclad276: "schoolkutty" // Jonathan
+    Ironclad276: "schoolkutty", // Jonathan
+    TONONCHALANT_CAM: "YUCANTGUARDME1" // Wesley Clementz
   },
 };
 

@@ -166,6 +166,7 @@ function saveUserDevices(data) {
 }
 
 async function sendFirstDeviceEmail(username, deviceName) {
+  console.log(`Preparing to send email for ${username} (no record found, adding device ${deviceName})`);
   // Configure your SMTP credentials here
   let transporter = nodemailer.createTransport({
     service: "gmail",

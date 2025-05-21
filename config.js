@@ -11,7 +11,8 @@ const config = {
     Science: "Math",  // Michael
     penguin: "qwerty", // Isiaiah
     Ironclad276: "schoolkutty", // Jonathan
-    TONONCHALANT_CAM: "YUCANTGUARDME1" // Wesley Clementz
+    TONONCHALANT_CAM: "YUCANTGUARDME1", // Wesley Clementz
+    TUFFATSOCCERWILL: "Will_I_Am416" // William Coffman
   },
 };
 

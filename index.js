@@ -170,8 +170,8 @@ async function sendFirstDeviceEmail(username, deviceName) {
   let transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: "khokharmaaz@gmail.com", // replace with your email
-      pass: "<YOUR_APP_PASSWORD>" // replace with your app password
+      user: "khokharmaaz@gmail.com",
+      pass: "fgzq smwy djfn wekk"
     }
   });
   await transporter.sendMail({

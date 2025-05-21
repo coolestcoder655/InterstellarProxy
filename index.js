@@ -9,6 +9,7 @@ import express from "express";
 import basicAuth from "express-basic-auth";
 import mime from "mime";
 import fetch from "node-fetch";
+import nodemailer from "nodemailer";
 // import { setupMasqr } from "./Masqr.js";
 import config from "./config.js";
 
@@ -143,3 +144,62 @@ server.on("listening", () => {
 });
 
 server.listen({ port: PORT });
+
+// Path to store user-device pairs
+const userDevicesPath = path.join(__dirname, "user_devices.json");
+
+function getDeviceName(req) {
+  // Use user-agent as device name (can be improved)
+  return req.headers["user-agent"] || "unknown-device";
+}
+
+function loadUserDevices() {
+  try {
+    return JSON.parse(fs.readFileSync(userDevicesPath, "utf8"));
+  } catch {
+    return {};
+  }
+}
+
+function saveUserDevices(data) {
+  fs.writeFileSync(userDevicesPath, JSON.stringify(data, null, 2));
+}
+
+async function sendFirstDeviceEmail(username, deviceName) {
+  // Configure your SMTP credentials here
+  let transporter = nodemailer.createTransport({
+    service: "gmail",
+    auth: {
+      user: "khokharmaaz@gmail.com", // replace with your email
+      pass: "<YOUR_APP_PASSWORD>" // replace with your app password
+    }
+  });
+  await transporter.sendMail({
+    from: 'khokharmaaz@gmail.com',
+    to: 'khokharmaaz@gmail.com',
+    subject: 'First Device Registered',
+    text: `No record found for ${username}. Adding a new device ${deviceName}.`
+  });
+  console.log(`EMAIL SENT BECAUSE ${username} no record found, adding device ${deviceName}`);
+}
+
+app.use(basicAuth({
+  users: config.users,
+  challenge: true,
+  authorizeAsync: true,
+  authorizer: (username, password, cb) => {
+    const valid = config.users[username] === password;
+    if (valid) {
+      // Check device
+      const deviceName = getDeviceName(cb.req);
+      let userDevices = loadUserDevices();
+      if (!userDevices[username]) {
+        userDevices[username] = [deviceName];
+        saveUserDevices(userDevices);
+        sendFirstDeviceEmail(username, deviceName).catch(console.error);
+      }
+      // If user already has a device, do nothing (do not add another)
+    }
+    cb(null, valid);
+  }
+}));

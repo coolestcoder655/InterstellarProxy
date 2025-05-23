@@ -3,7 +3,7 @@ const config = {
   users: {
     // You can add multiple users by doing username: 'password'.
     admin: "password1",  // Me
-    LittleTim2359: "Incineroar#737",  // Timothy
+    LittleTim2359: "Litten123",  // Timothy
     chingChong: "scammerMan",  // Arnik
     Skibidiaura2k: "1553pineapple",  // Walker
     // arab: "terroism"  // Rayaan

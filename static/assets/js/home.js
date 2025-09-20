@@ -53,7 +53,7 @@ if (
   }, 2000);
 }
 // Particles
-document.addEventListener("DOMContentLoaded", event => {
+document.addEventListener("DOMContentLoaded", (event) => {
   if (window.localStorage.getItem("Particles") === "true") {
     const particlesConfig = {
       particles: {
@@ -170,12 +170,11 @@ document.addEventListener("DOMContentLoaded", event => {
 });
 // Splash texts
 const SplashT = [
-  "Arnik is very gay",
-  "I'm super cool",
-  "I know.",
   "The FitnessGram Pacer Test is a multistage aerobic capacity test...",
-  "Arnik, don't report me :3",
-  "Some person named Isaiah C. is very smart :)"
+  "Checkout our suggestions button!",
+  "Click on the title for a surprise!",
+  "You can cloak this site as almost any site!",
+  "Make sure to export your data for safekeeping!",
 ];
 
 let SplashI = Math.floor(Math.random() * SplashT.length);
@@ -211,4 +210,42 @@ function getRandomUrl() {
 
 function randRange(min, max) {
   return Math.floor(Math.random() * (max - min) + min);
+}
+
+function surpriseTitle() {
+  const titleElement = document.querySelector(".title");
+  const originalTitle =
+    "&#73;&#110;&#116;&#101;&#114;&#115;&#116;&#101;&#108;&#108;&#97;&#114;"; // "Interstellar"
+
+  const surpriseMessages = [
+    "&#72;&#101;&#108;&#108;&#111;&#33;", // "Hello!"
+    "&#65;&#119;&#101;&#115;&#111;&#109;&#101;&#33;", // "Awesome!"
+    "&#67;&#111;&#111;&#108;&#33;", // "Cool!"
+    "&#77;&#97;&#103;&#105;&#99;&#33;", // "Magic!"
+    "&#87;&#111;&#119;&#33;", // "Wow!"
+    "&#83;&#117;&#114;&#112;&#114;&#105;&#115;&#101;&#33;", // "Surprise!"
+    "&#89;&#97;&#121;&#33;", // "Yay!"
+    "&#68;&#97;&#110;&#99;&#101;&#33;", // "Dance!"
+    "&#70;&#117;&#110;&#33;", // "Fun!"
+    "&#83;&#109;&#105;&#108;&#101;&#33;", // "Smile!"
+  ];
+
+  // Get random surprise message
+  const randomMessage = surpriseMessages[randRange(0, surpriseMessages.length)];
+
+  // Add fun animation class
+  titleElement.style.transform = "scale(1.1) rotate(5deg)";
+  titleElement.style.transition = "all 0.3s ease";
+  titleElement.style.color =
+    "#" + Math.floor(Math.random() * 16777215).toString(16); // Random color
+
+  // Change to surprise message
+  titleElement.innerHTML = randomMessage;
+
+  // Reset after 2 seconds
+  setTimeout(() => {
+    titleElement.style.transform = "";
+    titleElement.style.color = "";
+    titleElement.innerHTML = originalTitle;
+  }, 2000);
 }

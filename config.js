@@ -12,7 +12,8 @@ const config = {
     // penguin: "qwerty", // Isiaiah
     Ironclad276: "schoolkutty", // Jonathan
     TONONCHALANT_CAM: "YUCANTGUARDME1", // Wesley Clementz
-    TUFFATSOCCERWILL: "Will_I_Am416" // William Coffman
+    TUFFATSOCCERWILL: "Will_I_Am416", // William Coffman
+    "MakedyMakedy": "Msj5419100"
   },
 };
 

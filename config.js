@@ -10,7 +10,7 @@ const config = {
     // thesea: "theDeap", // Khalil
     Science: "Math",  // Michael
     // penguin: "qwerty", // Isiaiah
-    Ironclad276: "schoolkutty", // Jonathan
+    sinister: "mark", // Jonathan
     TONONCHALANT_CAM: "YUCANTGUARDME1", // Wesley Clementz
     TUFFATSOCCERWILL: "Will_I_Am416", // William Coffman
     "MakedyMakedy": "Msj5419100" // Salaar

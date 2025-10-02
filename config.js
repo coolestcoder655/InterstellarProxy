@@ -13,7 +13,6 @@ const config = {
     sinister: "mark", // Jonathan
     TONONCHALANT_CAM: "YUCANTGUARDME1", // Wesley Clementz
     TUFFATSOCCERWILL: "Will_I_Am416", // William Coffman
-    "MakedyMakedy": "Msj5419100" // Salaar
   },
 };
 
